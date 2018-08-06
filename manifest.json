@@ -1,14 +1,17 @@
 {
-  "name": "",
+  "name": "Wikipedia Styler",
   "manifest_version": 2,
-  "version": "",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Add a custom style to Wikipedia",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [{
     "js": [ "content.js"],
-    "matches": [ "<all_urls>"]
-    }],
+    "matches": [ "https://en.wikipedia.org/*"]
+   }],
   "background": {
     "scripts": ["background.js"]
    },
-   "permissions": []
+   "permissions": ["contextMenus", "tabs"]
 }
